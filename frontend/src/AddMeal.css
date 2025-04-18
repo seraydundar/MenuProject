@@ -1,0 +1,132 @@
+:root {
+  --coffee-bg:    #f5e1c7;
+  --coffee-light: #fff7ed;
+  --coffee-tan:   #a67c52;
+  --coffee-dark:  #6b4f4f;
+  --coffee-deep:  #4e3629;
+  --text-dark:    #3e2723;
+}
+
+/* src/AddMeal.css */
+
+/* Container */
+.add-meal-container {
+  background-color: #ffffff !important;
+  color: var(--text-dark);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Başlık */
+.add-meal-header h3 {
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+}
+
+.meal-icon {
+  margin-right: 10px;
+  color: var(--coffee-tan);
+}
+
+/* Form ve Gruplar */
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #444444;
+}
+
+/* input / textarea / file */
+.form-group input,
+.form-group textarea,
+.form-group input[type="file"] {
+  background-color: #ffffff !important;
+  color: var(--text-dark) !important;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--coffee-dark);
+  outline: none;
+}
+
+/* Dosya seçme butonu */
+.form-group input[type="file"]::-webkit-file-upload-button {
+  background-color: #ffffff;
+  color: var(--text-dark);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.form-group input[type="file"]::-webkit-file-upload-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Önizleme */
+.preview-container {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 120px;
+  max-height: 120px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Ekle butonu */
+.submit-btn {
+  background-color: var(--coffee-dark);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--coffee-deep);
+}
+
+/* Uyarı / mesaj */
+.message {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #d9534f;
+}
+
+/* Modal içindeki form */
+.modal-content .add-meal-container,
+.modal .add-meal-container {
+  background-color: #ffffff;
+  color: var(--text-dark);
+}

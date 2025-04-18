@@ -1,0 +1,136 @@
+:root {
+  --coffee-bg:    #f5e1c7;
+  --coffee-light: #fff7ed;
+  --coffee-tan:   #a67c52;
+  --coffee-dark:  #6b4f4f;
+  --coffee-deep:  #4e3629;
+  --text-dark:    #3e2723;
+}
+
+.category-card {
+  position: relative;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  transition: background 0.3s;
+}
+.overlay:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+.overlay h2 {
+  margin: 0.5rem 0;
+  font-size: 1.5rem;
+}
+.overlay p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+.overlay button {
+  background: var(--coffee-tan);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.overlay button:hover {
+  background: var(--coffee-dark);
+}
+
+/* Modal Genel */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal {
+  background: #fff;
+  color: var(--text-dark);
+  width: 90%;
+  max-width: 600px;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-header h3 {
+  margin: 0;
+}
+.modal-header-actions button {
+  margin-left: 0.5rem;
+  background: var(--coffee-tan);
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modal-header-actions button:hover {
+  background: var(--coffee-dark);
+}
+
+.close-btn {
+  margin-top: 1rem;
+  background: var(--coffee-tan);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Formlar */
+.modal label {
+  display: block;
+  margin-top: 1rem;
+}
+.modal input[type="text"],
+.modal input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal-footer {
+  margin-top: 1rem;
+  text-align: right;
+}
+.modal-footer button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}

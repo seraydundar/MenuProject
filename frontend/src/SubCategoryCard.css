@@ -1,0 +1,199 @@
+:root {
+  --coffee-bg:    #f5e1c7;
+  --coffee-light: #fff7ed;
+  --coffee-tan:   #a67c52;
+  --coffee-dark:  #6b4f4f;
+  --coffee-deep:  #4e3629;
+  --text-dark:    #3e2723;
+}
+
+/* Alt kategori kartı */
+.subcat-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.subcat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--coffee-light);
+  border-top: 3px solid var(--coffee-tan);
+}
+.subcat-header h4 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--coffee-dark);
+}
+.subcat-header-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.subcat-header-actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: var(--coffee-tan);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.subcat-header-actions button:hover {
+  background: var(--coffee-deep);
+}
+.subcat-header-actions .btn-delete {
+  background: #e74c3c;
+}
+.subcat-header-actions .btn-delete:hover {
+  background: #c0392b;
+}
+
+/* Yemek listesi */
+.card-body {
+  padding: 1rem 1.5rem;
+}
+.empty {
+  color: var(--text-dark);
+  font-style: italic;
+}
+.meal-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.meal-item:hover {
+  background: #f5f5f5;
+}
+.meal-item img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.meal-info strong {
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.meal-info p {
+  margin: 0 0 0.3rem;
+  color: #555;
+}
+.meal-info small {
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+/* Alt kategori içi aksiyon butonları */
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid #eee;
+}
+.add-meal-btn {
+  background: var(--coffee-tan);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.add-meal-btn:hover {
+  background: var(--coffee-dark);
+}
+
+/* Modal overlay & content */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background: #fff;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Form elemanları */
+.form-group {
+  margin-bottom: 1rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.form-group input[type="text"],
+.form-group input[type="file"] {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.form-group input:focus {
+  border-color: var(--coffee-tan);
+  outline: none;
+}
+
+/* Modal alt butonları */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.modal-footer .btn-cancel,
+.modal-footer .btn-save {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modal-footer .btn-cancel {
+  background: #eee;
+  color: var(--text-dark);
+}
+.modal-footer .btn-cancel:hover {
+  background: #ddd;
+}
+.modal-footer .btn-save {
+  background: var(--coffee-tan);
+  color: #fff;
+}
+.modal-footer .btn-save:hover {
+  background: var(--coffee-dark);
+}

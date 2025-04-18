@@ -1,0 +1,135 @@
+:root {
+  --coffee-bg:    #f5e1c7;
+  --coffee-light: #fff7ed;
+  --coffee-tan:   #a67c52;
+  --coffee-dark:  #6b4f4f;
+  --coffee-deep:  #4e3629;
+  --text-dark:    #3e2723;
+}
+
+/* src/MealHistoryEditor.css */
+
+/* src/MealHistoryEditor.css */
+
+/* 1) .history-editor’in gri arkaplanını tamamen saydam yapıyoruz */
+.history-editor {
+  position: fixed;
+  inset: 0;
+  background: transparent;  /* eski #e0e0e0 kaldırıldı */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;               /* pseudo-element’in altında kalacak */
+}
+
+/* 2) Pseudo-element ile aynı bulanık arka planı veriyoruz */
+.history-editor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("assets/back.jpg") no-repeat center center;
+  background-size: cover;
+  filter: blur(8px);
+  transform: scale(1.05);
+  z-index: -1;              /* container’ın arkasında kalsın */
+}
+
+/* 3) İçerik container’ı en öne almamız için z-index ayarı */
+.page-container {
+  position: relative;
+  z-index: 1;
+  width: 90vw;
+  height: 90vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 1px #ccc, 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Geri kalan stiller aynı kalabilir… */
+
+
+/* ReactQuill wrapper */
+.page-container .react-quill {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Quill toolbar */
+.page-container .react-quill .ql-toolbar {
+  border: none;
+  background: var(--coffee-bg);
+  border-bottom: 1px solid #ccc;
+  flex: 0 0 auto;
+}
+
+/* Quill içeriği */
+.page-container .react-quill .ql-container {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  padding: 16px;
+  border: none;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+/* Editör metni */
+.page-container .ql-editor {
+  min-height: 100%;
+  color: #000;
+  font-family: 'Calibri', sans-serif;
+  font-size: 11pt;
+}
+
+/* Görseller */
+.page-container .ql-editor img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Font size dropdown */
+.ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value);
+}
+
+/* Footer */
+.editor-footer {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--coffee-bg);
+  border-top: 1px solid #ccc;
+}
+
+.editor-footer .btn-back,
+.editor-footer .btn-save {
+  border: none;
+  padding: 6px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-back {
+  background: var(--coffee-light);
+  color: var(--coffee-dark);
+}
+
+.btn-back:hover {
+  background: var(--coffee-bg);
+}
+
+.btn-save {
+  background: var(--coffee-dark);
+  color: #fff;
+}
+
+.btn-save:hover {
+  background: var(--coffee-deep);
+}
